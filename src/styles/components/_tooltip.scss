@@ -1,4 +1,6 @@
-.tooltip1 {
+// tooltip--top1
+// ==================================================/
+.tooltip--top1 {
     @extend %pos--relative;
     @extend %display--inline;
 
@@ -22,15 +24,139 @@
   &:hover::before {
     @extend %display--block;
     @extend %pos--absolute;
-    border: solid;
-    border-color: #111 transparent;
-    border-color: rgba(0,0,0,.8) transparent;
-    border-width: .4em .4em 0 .4em;
+    
+    border: 0.4em solid transparent; 
+    border-top-color: #000; 
+    border-bottom: 0; 
+    
     bottom: 1em;
     content: "";
-    left: 2em;
+    left: 50%;
     z-index: 99;
   }
 }
+
+// tooltip--bottom1
+// ==================================================/
+.tooltip--bottom1 {
+    @extend %pos--relative;
+    @extend %display--inline;
+    
+  &:hover {
+    
+  }
+
+  &:hover::after {
+    @extend %pos--absolute;
+    @extend %padd--4;
+    @extend %br--4;
+    content: attr(title);
+    background-color: #111;
+    top: 1.50em;
+    color: #fff;
+    left: 0;
+    white-space: nowrap;
+    z-index: 98;
+  }
+
+  &:hover::before {
+    @extend %display--block;
+    @extend %pos--absolute;
+    
+    border: 0.4em solid transparent; 
+    border-bottom-color: #000; 
+    border-top: 0;
+    
+    top: 1.2em;
+    content: "";
+    left: 50%;
+    z-index: 99;
+  }
+}
+
+// tooltip--left1
+// ==================================================/
+.tooltip--left1 {
+    @extend %pos--relative;
+    @extend %display--inline;
+
+  &:hover {
+    
+  }
+
+  &:hover::after {
+    @extend %pos--absolute;
+    @extend %padd--4;
+    @extend %br--4;
+    content: attr(title);
+    background-color: #111;
+    top: 0;
+    color: #fff;
+    right: 100%;
+    margin-right: 4px;
+    white-space: nowrap;
+    z-index: 98;
+  }
+
+  &:hover::before {
+    @extend %display--block;
+    @extend %pos--absolute;
+    
+    border: 0.4em solid transparent; 
+    border-left-color: #000; 
+    border-right: 0;
+    
+    top: 35%;
+    content: "";
+    left: 0;
+    margin-left: -4px;
+    z-index: 99;
+  }
+}
+
+// tooltip--right1
+// ==================================================/
+.tooltip--right1 {
+    @extend %pos--relative;
+    @extend %display--inline;
+
+  &:hover {
+    
+  }
+
+  &:hover::after {
+    @extend %pos--absolute;
+    @extend %padd--4;
+    @extend %br--4;
+    content: attr(title);
+    background-color: #111;
+    top: 0;
+    color: #fff;
+    left: 100%;
+    margin-left: 4px;
+    white-space: nowrap;
+    z-index: 98;
+  }
+
+  &:hover::before {
+    @extend %display--block;
+    @extend %pos--absolute;
+    
+    border: 0.4em solid transparent; 
+    border-right-color: #000; 
+    border-left: 0;
+    
+    top: 35%;
+    content: "";
+    right: 0;
+    margin-right: -4px;
+    z-index: 99;
+  }
+}
+
+
+
+
+
 
 
