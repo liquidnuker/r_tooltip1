@@ -29,6 +29,7 @@
 // temp
 body {
   @extend %system_normal--300;
+  font-size: rem(16);
 }
 
 .item-id {
